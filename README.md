@@ -8,7 +8,7 @@ homogeneous networks, to be friendly when competing with conventional TCP source
 respond to bandwidth as it becomes available, and to utilise link bandwidth in an efficient manner.
 Further, when deployed in conventional networks, H-TCP behaves as a conventional TCP-variant.</p>
 <b>Steps Followed</b><br>
-Change the following to parameters according to your tcp.
+Change the following to parameters according to your tcp.<br>
 -> std::string transport_prot = "";<br>
 -> std::string linux_prot = "";<br>
 
