@@ -7,7 +7,7 @@ speed and long-distance networks.The new protocol, H-TCP, is shown to fair when 
 homogeneous networks, to be friendly when competing with conventional TCP sources, to rapidly
 respond to bandwidth as it becomes available, and to utilise link bandwidth in an efficient manner.
 Further, when deployed in conventional networks, H-TCP behaves as a conventional TCP-variant.</p>
-<b>Steps Followed</b>
+<b>Steps Followed</b><br>
 Change the following to parameters according to your tcp.
 -> std::string transport_prot = "";<br>
 -> std::string linux_prot = "";<br>
@@ -15,8 +15,9 @@ Change the following to parameters according to your tcp.
 1.Linux:
  -> source/ns-3-dce$./waf --run "dce-gfc-dumbbell --stack=linux" //after successful build<br>
  ->Go to utils folder and run gfc_dumbbell_parse_cwnd_v2.py //$python2 gfc_dumbbell_parse_cwnd_v2.py<br>
- ->A cwnd_data will be created in results/gfc-dumbell/. A folder is newly created like"06-11-2018-01-00-27".copy linux-gnuplotscriptCwnd from pcap folder into cwnd_data and plots graphs for cwnd //$gnuplot linux-gnuplotscriptCwnd<br>
- ->copy linux-gnuplotscriptQ from pcap and paste it along with pcap(outside pcap folder) and plot graph //$gnuplot linux-gnuplotscriptQ<br>
+ ->A cwnd_data will be created in results/gfc-dumbell/. A folder will be  newly created like "06-11-2018-01-00-27" according to the current time.
+->copy linux-gnuplotscriptCwnd from pcap folder into cwnd_data and plots graphs for cwnd //$gnuplot linux-gnuplotscriptCwnd<br>
+->copy linux-gnuplotscriptQ from pcap and paste it along with pcap(outside pcap folder) and plot graph //$gnuplot linux-gnuplotscriptQ<br>
 
 2.ns3:<br>
  ->source/ns-3-dce$./waf --run "dce-gfc-dumbbell --stack=ns3"//after successful build<br>
