@@ -186,6 +186,7 @@ int main (int argc, char *argv[])
   std::string recovery = "ns3::TcpClassicRecovery";
   std::string queue_disc_type = "FifoQueueDisc";
   bool useEcn = true;
+  bool isSack = false;
   uint32_t dataSize = 1446;
   uint32_t delAckCount = 2;
 
@@ -345,6 +346,8 @@ int main (int argc, char *argv[])
       linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_dsack", "0");
       linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_rack", "0");
       linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_rack", "0");
+      linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_sack", "0");
+      linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_sack", "0");
       //linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_ecn", "1");
       //linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_ecn", "1");
     }
@@ -424,7 +427,8 @@ int main (int argc, char *argv[])
       Config::SetDefault ("ns3::TcpSocket::InitialCwnd", UintegerValue (10));
       Config::SetDefault ("ns3::TcpSocket::DelAckCount", UintegerValue (delAckCount));
       Config::SetDefault ("ns3::TcpSocket::SegmentSize", UintegerValue (dataSize));
-      Config::SetDefault ("ns3::TcpSocketBase::EcnMode", StringValue ("ClassicEcn"));    
+      Config::SetDefault ("ns3::TcpSocketBase::EcnMode", StringValue ("ClassicEcn"));
+      Config::SetDefault ("ns3::TcpSocketBase::Sack", BooleanValue (isSack));    
     }
 
   // Set default parameters for queue disc
