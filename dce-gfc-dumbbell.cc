@@ -339,6 +339,12 @@ int main (int argc, char *argv[])
       linuxStack.SysctlSet (rightNodes, ".net.ipv4.conf.default.forwarding", "1");
       linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_congestion_control", linux_prot);
       linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_congestion_control", linux_prot);
+      linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_fack", "0");
+      linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_fack", "0");
+      linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_dsack", "0");
+      linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_dsack", "0");
+      linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_rack", "0");
+      linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_rack", "0");
       //linuxStack.SysctlSet (leftNodes, ".net.ipv4.tcp_ecn", "1");
       //linuxStack.SysctlSet (rightNodes, ".net.ipv4.tcp_ecn", "1");
     }
