@@ -29,6 +29,6 @@ Change the following to parameters according to your tcp.<br>
  ->Copy all plotme files of linux and ns3 of cwnd and queue length into the new folder created.<br>
  ->Copy gnuplotscriptComparison and gnuplotscriptComparison_Queue files into the new folder.<br>
  ->Run the above two gnuplots inorder to get the  merged plots for linux and ns3.<br>
-
-4.Disabled dsack,rack,fack in linux.<br>
-5.Diabled sack in linux and ns-3.
+4.Tried by increasing  and decreasing  the datarate and obtained the graphs.<br> 
+5.Disabled dsack,rack,fack in linux.<br>
+6.Diabled sack in linux and ns-3.
