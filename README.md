@@ -30,5 +30,6 @@ Change the following to parameters according to your tcp.<br>
  ->Copy gnuplotscriptComparison and gnuplotscriptComparison_Queue files into the new folder.<br>
  ->Run the above two gnuplots inorder to get the  merged plots for linux and ns3.<br>
 4.Tried by increasing  and decreasing  the datarate and obtained the graphs.<br> 
-5.Disabled dsack,rack,fack in linux.<br>
-6.Diabled sack in linux and ns-3.
+5.Went through the ns-3 implementation by comparing with the algorithm given in the paper.<br>
+6.Disabled dsack,rack,fack in linux.<br>
+7.Diabled sack in linux and ns-3.
