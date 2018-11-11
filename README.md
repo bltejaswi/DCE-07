@@ -33,3 +33,4 @@ Change the following to parameters according to your tcp.<br>
 5.Went through the ns-3 implementation by comparing with the algorithm given in the paper.<br>
 6.Disabled dsack,rack,fack in linux.<br>
 7.Disabled sack in linux and ns-3.
+8.As graphs obtained by disabling sack are not good we enabled it.
