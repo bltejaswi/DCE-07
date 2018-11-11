@@ -32,5 +32,6 @@ Change the following to parameters according to your tcp.<br>
 4.Tried by increasing  and decreasing  the datarate and obtained the graphs.<br> 
 5.Went through the ns-3 implementation by comparing with the algorithm given in the paper.<br>
 6.Disabled dsack,rack,fack in linux.<br>
-7.Disabled sack in linux and ns-3.
-8.As graphs obtained by disabling sack are not good we enabled it.
+7.Disabled sack in linux and ns-3.<br>
+8.As graphs obtained by disabling sack are not good we enabled it.<br>
+9.Tried with different combinations of bandwidth,propogation delay and queue size.<br>
